@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --header-height: 4.5rem;
+  /*fonts*/
+  --title-font-size: 1.875rem;
+  --subtitle-font-size: 1rem;
+
+  --title-font: 'Poppins', sans-serif;
+  --body-font: 'DM Sans', sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font: 200 1rem var(--body-font);
+}
+.button {
+  background-color: rgba(255, 250, 250, 0.836);
+  color: black;
+  height: 3.5rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 2rem;
+  border-radius: 0.25rem;
+  font: 500 1rem var(--body-font);
+
+  transition: background 0.3s;
+}
+.button:hover {
+  background: rgb(179, 166, 166);
+}
+/*===============Layout==============*/
+.container {
+  margin-left: 1.2rem;
+  margin-right: 1.5rem;
+}
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+.section {
+  padding: calc(2rem + var(--header-height)) 0;
+}
+header .grid a {
+  transition: 0.2s;
+  display: inline-block;
+}
+header .grid a:hover {
+  transform: translateY(-12px);
+}
+#header .title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: white;
+}
+#header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: dimgrey;
+}
+.logo {
+  font: 700 1.31rem var(--title-font);
+  color: rgb(153, 150, 144);
+}
+.logo span {
+  color: white;
+}
+nav {
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2rem;
+}
+nav ul li a::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: black;
+
+  position: absolute;
+  left: 0;
+  bottom: -1rem;
+
+  transition: width 0.2s;
+}
+nav ul li a:hover::after,
+nav ul li a.active::after {
+  width: 100%;
+}
+
+nav ul li {
+  text-align: center;
+}
+nav ul .social {
+  font-size: 25px;
+  color: white;
+  margin-left: 1em;
+}
+nav .menu ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.3s;
+}
+nav .menu ul li a:hover {
+  background: rgb(179, 166, 166);
+  border-radius: 4px;
+}
+
+#home {
+  background-image: url(./image/hai-phung-m4Pd_e-4zKs-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 700px;
+  background-image: fixed;
+  color: white;
+  text-align: center;
+}
+#home h1 {
+  margin-bottom: 2rem;
+  font: 900 var(--title-font-size) var(--title-font);
+  font-size: 500%;
+}
+#home h3 {
+  font: 900 var(--title-font-size) var(--title-font);
+}
+#home .text p {
+  margin-bottom: 1rem;
+  max-width: 100%;
+  font: 200 var(--title-font-size) var(--title-font);
+}
+#quemsomos {
+  background: whitesmoke;
+}
+#quemsomos .title {
+  color: rgb(116, 94, 53);
+  font: 900 var(--title-font-size) var(--title-font);
+  font-size: 300%;
+  text-align: center;
+  margin-bottom: 100px;
+}
+#quemsomos .text {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+}
+#quemsomos .text p {
+  font-size: large;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#quemsomos .container {
+  margin-right: center;
+  margin-left: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#quemsomos .image {
+  width: 500px;
+  height: 550px;
+}
+#services .title {
+  color: white;
+  font: 900 var(--title-font-size) var(--title-font);
+  font-size: 500%;
+  text-align: center;
+}
+#services {
+  background-color: rgb(141, 105, 61);
+}
+#services .cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  font: 500 var(--title-font-size) var(--title-font);
+  color: white;
+}
+#services .cards ul span {
+  color: black;
+  padding: 5rem;
+}
+#services .cards ul li {
+  color: white;
+  margin-bottom: 1.5rem;
+}
+.cards.grid {
+  gap: 1rem;
+}
+#galeria .title {
+  color: rgb(141, 105, 61);
+  font: 900 var(--title-font-size) var(--title-font);
+  font-size: 500%;
+  text-align: center;
+}
+#galeria .cards {
+  display: flex;
+}
+#contact .title {
+  color: white;
+  font: 900 var(--title-font-size) var(--title-font);
+  font-size: 500%;
+  text-align: center;
+}
+#contact {
+  background-color: rgb(141, 105, 61);
+}
+#contact .cards from {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#contact form {
+  width: 100%;
+  max-width: 1000px;
+  margin: 5px auto;
+}
+#contact form fieldset {
+  border: none;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+form fieldset label {
+  display: flex;
+  flex-direction: column;
+}
+
+form fieldset label input {
+  font-size: 1rem;
+  padding: 0.3rem;
+  border-radius: 4px;
+  outline: none;
+
+  border: 1px solid rgba(0, 0, 255, 0.315);
+
+  transition: 0.2s;
+}
+
+form fieldset label input:focus {
+  border-color: rgba(0, 0, 255, 0.459);
+  box-shadow: 0 0 0 2px rgba(24, 248, 248, 0.349);
+}
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#section .cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#section .card h4 {
+  color: rgb(141, 105, 61);
+  font-size: 20px;
+}
+#section .card {
+  padding: 0 3rem;
+}
