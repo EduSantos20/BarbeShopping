@@ -54,7 +54,7 @@ body {
   gap: 1rem;
 }
 .section {
-  padding: 1rem 0;
+  padding: 0 2rem;
 }
 header .grid a {
   transition: 0.2s;
@@ -178,6 +178,7 @@ nav .menu ul li a:hover {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  margin: 2rem 0;
 }
 #quemsomos .image {
   width: 500px;
@@ -282,4 +283,15 @@ button {
 }
 #section .card {
   padding: 0 3rem;
+}
+footer {
+  background-color: dimgrey;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.social a {
+  padding: 0 2rem;
+  font-size: 25px;
+  color: white;
 }
